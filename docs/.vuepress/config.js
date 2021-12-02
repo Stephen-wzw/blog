@@ -16,7 +16,7 @@ module.exports = {
         ] 
       },
       { text: "Client", link: "/framework/" },
-      { text: "Server", link: "/framework/" },
+      { text: "Server", link: "/server/" },
       { text: "GitHub", link: "https://google.com" },
     ],
     sidebar: {
@@ -26,6 +26,15 @@ module.exports = {
           collapsable: false,
           children: [
             'layout/layout.md',
+          ]
+        }
+      ],
+      '/server/': [
+        {
+          title: 'server',
+          collapsable: false,
+          children: [
+            'practice/设置 ssh 密钥登录.md',
           ]
         }
       ],
