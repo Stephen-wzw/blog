@@ -35,6 +35,7 @@ module.exports = {
           collapsable: false,
           children: [
             'practice/设置 ssh 密钥登录.md',
+            'practice/搭建 git 私服.md'
           ]
         }
       ],
