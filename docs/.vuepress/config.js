@@ -46,8 +46,15 @@ module.exports = {
           collapsable: false,
           children: [
             '/server/',
-            '/server/practice/设置 ssh 密钥登录.md',
-            '/server/practice/搭建 git 私服.md'
+            {
+              title: '部署 vuepress',
+              children: [
+                '/server/practice/0001、设置 ssh 密钥登录.md',
+                '/server/practice/0002、搭建 git 私服.md',
+                '/server/practice/0003、配置宝塔面板.md',
+                '/server/practice/0004、自动部署.md'
+              ]
+            }
           ]
         }
       ],
