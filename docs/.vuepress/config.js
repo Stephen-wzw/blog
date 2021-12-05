@@ -3,16 +3,27 @@ module.exports = {
   description: "Just playing around",
 
   themeConfig: {
+    lastUpdated: 'Last Updated', // string | boolean
     nav: [
       { text: "HTML", link: "/html/" },
       { text: "CSS", link: "/css/" },
       { text: "JavaScript", link: "/javascript/" },
       { 
-        text: "框架", 
-        link: "/framework/", 
+        text: "Reading",
+        link: "/reading/",
         items: [
-          { text: "Vue", link: "/framework/vue" },
-          { text: "React", link: "/framework/React" }
+          {
+            text: "JavaScript",
+            items: [ { text: "红宝书", link: "/reading/红宝书.md" }]
+          },
+        ]
+      },
+      {
+        text: "Library", 
+        link: "/library/", 
+        items: [
+          { text: "Vue", link: "/library/vue" },
+          { text: "React", link: "/library/React" }
         ] 
       },
       { text: "Client", link: "/framework/" },
@@ -31,11 +42,12 @@ module.exports = {
       ],
       '/server/': [
         {
-          title: 'server',
+          title: 'Server',
           collapsable: false,
           children: [
-            'practice/设置 ssh 密钥登录.md',
-            'practice/搭建 git 私服.md'
+            '/server/',
+            '/server/practice/设置 ssh 密钥登录.md',
+            '/server/practice/搭建 git 私服.md'
           ]
         }
       ],

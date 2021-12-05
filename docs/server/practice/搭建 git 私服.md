@@ -12,22 +12,14 @@
 * 服务器：centos7.9
 * 本地电脑: Windows10
 
-:::tip
 如果服务器没装 git 可以使用以下命令安装：
-:::
 
 ```bash
 yum install git
 ```
 ## 创建 git 用户
 
-创建一个 Git 的 Linux 账户，这个账户只做 Git 私服的操作，也是为了安全起见。
-
-:::tip
-如果不新创建一个 Linux 账户，在自己的常用的 Linux 账户下创建的话，哪天手抖 来一个 rm -rf * 操作，数据可全没了。
-:::
-
-之后就要设置 Linux Git 账户的密码，但由于我之前已经[设置了 ssh 登录](设置%20ssh%20密钥登录.md)，因此不用设置密码。
+创建一个 Git 的 Linux 账户，这个账户只做 Git 私服的操作，之后就要设置 Linux Git 账户的密码，但由于我之前已经[设置了 ssh 登录](设置%20ssh%20密钥登录.md)，因此不用设置密码。
 
 ```bash
 adduser git
@@ -48,14 +40,14 @@ adduser git
 
 ## 服务器端密钥管理
 
-创建 .ssh 目录，如果 .ssh 已经存在了，可以忽略这一项。方便每次操作 Git 仓库的时候不用再去输入密码。
+创建 `.ssh` 目录，如果 `.ssh` 已经存在了，可以忽略这一项。方便每次操作 Git 仓库的时候不用再去输入密码。
 
 ```bash
 cd ~/
 mkdir .ssh
 ```
 
-进入 .ssh 文件下，创建一个 authorized_keys 文件，并给 authorized_keys 文件设置权限。这个文件用来存放客户端的公钥。
+进入 `.ssh` 文件下，创建一个 `authorized_keys` 文件，并给 `authorized_keys` 文件设置权限。这个文件用来存放客户端的公钥。
 
 ```bash
 cd ~/.ssh
@@ -64,13 +56,13 @@ chmod 700 /home/git/.ssh
 chmod 600 /home/git/.ssh/authorized_keys
 ```
 
-接下来要把客户端的公钥放在 Git 服务器上，我们在回到客户端，创建一个公钥。
+接下来要把客户端的公钥放在 Git 服务器上，我们再回到客户端，创建一个公钥。
 
-在我们自己的电脑上，有公钥和私钥。两个文件分别是：id_rsa 和 id_rsa.pub。
+在我们自己的电脑上，有公钥和私钥。两个文件分别是：`id_rsa` 和 `id_rsa.pub`。
 
-如果是 Windows 系统公钥私钥的目录在 C:\Users\用户名.ssh 下。
+如果是 Windows 系统公钥私钥的目录在 `C:\Users\用户名.ssh` 下。
 
-如果是 Mac 或者 Linux， 公钥和私钥的目录这里 cd ~/.ssh/， 如果发现自己的电脑上没有公钥私钥，那就自己创建一个。
+如果是 Mac 或者 Linux， 公钥和私钥的目录这里 `cd ~/.ssh/`， 如果发现自己的电脑上没有公钥私钥，那就自己创建一个。
 
 创建密钥的命令：
 
@@ -78,9 +70,9 @@ chmod 600 /home/git/.ssh/authorized_keys
 ssh-keygen -t rsa
 ```
 
-创建密钥的过程中，一路点击回车就可以了，不需要填任何东西。把刚刚生成的 id_rsa.pub，拷贝到 Git 服务器的 /home/git/.ssh/ 目录。
+创建密钥的过程中，一路点击回车就可以了，不需要填任何东西。把刚刚生成的 `id_rsa.pub`，拷贝到 Git 服务器的 `/home/git/.ssh/` 目录。
 
-在 Git 服务器上，将公钥添加到 authorized_keys 文件中：
+在 Git 服务器上，将公钥添加到 `authorized_keys` 文件中：
 
 ```bash
 cd /home/git/.ssh/
@@ -143,7 +135,7 @@ sudo su - git
 cd ~/git
 ```
 
-创建一个文件夹名为 world.git，`.git` 后缀表明这是一个 git 仓库而不是别的什么文件。
+创建一个文件夹名为 `world.git`，`.git` 后缀表明这是一个 git 仓库而不是别的什么文件。
 
 ```bash
 [git@localhost git]# mkdir world.git
@@ -162,7 +154,7 @@ git init --bare
 
 ## 客户端连接远程仓库
 
-在自己的电脑上创建一个文件夹也叫做 world
+在自己的电脑上创建一个文件夹也叫做 `world`
 
 :::tip
 其实这里命名是随意的，但是我们为了和 Git 服务端的仓库名称保持同步。这样更直观我们操作的是哪一个仓库。
@@ -173,14 +165,14 @@ mkdir world
 cd world
 ```
 
-进入 world 文件，并初始化操作：
+进入 `world` 文件，并初始化操作：
 
 ```bash
 cd world
 git init
 ```
 
-在 world 目录上创建一个测试文件，并且将其添加到 Git 私服中：
+在 `world` 目录上创建一个测试文件，并且将其添加到 Git 私服中：
 
 ```bash
 touch test
@@ -195,7 +187,7 @@ git remote add origin git@服务器 ip:world.git
 git push -u origin master
 ```
 
-此时这个 test 测试文件就已经提交到我们的 Git 远端私服上了。
+此时这个 `test` 测试文件就已经提交到我们的 Git 远端私服上了。
 
 ## 参考链接
 
