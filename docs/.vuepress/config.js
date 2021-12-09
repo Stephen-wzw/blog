@@ -36,7 +36,7 @@ module.exports = {
           title: 'CSS',
           collapsable: false,
           children: [
-            'layout/layout.md',
+            'layout/basic-layout.md',
           ]
         }
       ],
