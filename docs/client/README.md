@@ -22,27 +22,18 @@
 
 ## JavaScript 引擎
 
-常见的 JavaScript 引擎：
+**JavaScript 引擎**是一个专门处理 JavaScript 脚本的虚拟机，一般会附带在网页浏览器之中，能为程序员提供部分操作浏览器的功能（网络、DOM、外部事件、HTML5 视频、canvas 和存储），并且用于将 JavaScript 代码翻译成 CPU 指令。比较常见的引擎有：
 
 * SpiderMonkey：第一款 JavaScript 引擎，由 Brendan Eich 开发（也就是 JavaScript 作者）；
-* Chakra（JS 引擎）：微软开发，用于 IE 浏览器；
-* Chakra（JavaScript 引擎）：用于 Edge；
-* JavaScriptCore：WebKit 中的 JavaScript 引擎，Apple 公司开发；
-* V8：Google 开发的强大 JavaScript 引擎。
+* Chakra（JScript 引擎）：微软开发，用于 IE 浏览器；
+* Chakra（JavaScript 引擎）：微软开发，用于 Edge 浏览器；
+* JavaScriptCore：WebKit 中的 JavaScript 引擎，Apple 公司开发，用于 Safari；
+* V8：Google 开发的强大 JavaScript 引擎，也帮助 Chrome 从众多浏览器中脱颖而出；
 
 ## 主要内容
 
 * [输入 URL 浏览器干了什么](./0001、输入 URL 浏览器干了什么.md)
 * [浏览器是怎么渲染的](./0002、浏览器是怎么渲染的.md)
-* [v8 引擎](./v8 引擎.md)
+* [V8 引擎](./0003、V8 引擎.md)
 * [DOM Tree、CSSOM](./DOM Tree、CSSOM.md)
 * ...
-
-## 参考链接
-
-1. [How Browsers Work: Behind the scenes of modern web browsers - HTML5 Rocks](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#The_order_of_processing_scripts_and_style_sheets)
-2. [浏览器的渲染原理简介](https://coolshell.cn/articles/9666.html)
-3. [JavaScript引擎 - 维基百科](https://zh.wiki.hancel.org/wiki/JavaScript引擎)
-4. [浏览器引擎 - 维基百科](https://zh.m.wikipedia.org/wiki/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E)
-5. [浏览器内核及分类 - 腾讯云社区](https://cloud.tencent.com/developer/article/1679313)
-
