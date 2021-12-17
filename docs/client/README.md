@@ -28,7 +28,7 @@
 * Chakra（JScript 引擎）：微软开发，用于 IE 浏览器；
 * Chakra（JavaScript 引擎）：微软开发，用于 Edge 浏览器；
 * JavaScriptCore：WebKit 中的 JavaScript 引擎，Apple 公司开发，用于 Safari；
-* V8：Google 开发的强大 JavaScript 引擎，也帮助 Chrome 从众多浏览器中脱颖而出；
+* V8：Google 开发的强大 JavaScript 引擎，C++ 编写。
 
 ## 主要内容
 
