@@ -4,7 +4,7 @@ var SideBar = require('./configs/sidebar');
 module.exports = {
   title: "Hello VuePress",
   description: "Just playing around",
-  base: "/knowledge-repo/",
+  base: "/blog/",
 
   themeConfig: {
     lastUpdated: 'Last Updated', // string | boolean
