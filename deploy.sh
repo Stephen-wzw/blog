@@ -15,7 +15,7 @@ git add -A
 git commit -m 'deploy'
 
 # 发布到 git 私服， -f 强制覆盖
-git remote add origin git@119.23.65.118:/home/git/knowledge-repo.git
-git push -f git@119.23.65.118:/home/git/knowledge-repo.git master
+git remote add origin git@119.23.65.118:/home/git/blog.git
+git push -f git@119.23.65.118:/home/git/blog.git master
 
 cd -
