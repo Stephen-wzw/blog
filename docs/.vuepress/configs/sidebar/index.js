@@ -11,9 +11,10 @@ module.exports = {
       title: "客户端",
       collapsable: false,
       children: [
-        "0001、输入 URL 浏览器干了什么.md",
+        "0001、输入URL浏览器干了什么.md",
         "0002、浏览器是怎么渲染的.md",
-        "0003、V8 引擎"
+        "0003、V8引擎",
+        "0004、内存管理"
       ]
     }
   ],
