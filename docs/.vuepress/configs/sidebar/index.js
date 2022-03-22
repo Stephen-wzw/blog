@@ -37,7 +37,7 @@ module.exports = {
         {
           title: "对象",
           children: [
-            "/library/Vue/01、深入理解对象.md",
+            "/library/Vue/01、响应式原理.md",
           ],
         },
       ],
