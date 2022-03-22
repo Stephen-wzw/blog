@@ -3,16 +3,6 @@ module.exports = [
   { text: "CSS", link: "/css/" },
   { text: "JavaScript", link: "/javascript/" },
   {
-    text: "Reading",
-    link: "/reading/",
-    items: [
-      {
-        text: "JavaScript",
-        items: [{ text: "红宝书", link: "/reading/红宝书.md" }],
-      },
-    ],
-  },
-  {
     text: "常用框架",
     link: "/library/",
     items: [
@@ -22,5 +12,6 @@ module.exports = [
   },
   { text: "客户端", link: "/client/" },
   { text: "服务器", link: "/server/" },
-  { text: "GitHub", link: "https://github.com/Stephen-wzw" },
+  { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
+  { text: "GitHub", link: "https://github.com/Stephen-wzw/blog", icon: 'reco-github' },
 ];

@@ -5,5 +5,8 @@
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vuepress-theme-reco": "^1.6.11"
   }
 }

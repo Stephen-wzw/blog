@@ -1,9 +1,46 @@
 module.exports = {
+  "/html/": [
+    {
+      title: "HTML",
+      collapsable: false,
+      children: ["HTML.md"],
+    },
+  ],
   "/css/": [
     {
       title: "CSS",
       collapsable: false,
       children: ["layout/basic-layout.md"],
+    },
+  ],
+  "/javascript/": [
+    {
+      title: "JavaScript",
+      collapsable: false,
+      children: [
+        "/javascript/",
+        {
+          title: "对象",
+          children: [
+            "/javascript/object/01、深入理解对象.md",
+          ],
+        },
+      ],
+    },
+  ],
+  "/library/": [
+    {
+      title: "Vue",
+      collapsable: false,
+      children: [
+        "/library/",
+        {
+          title: "对象",
+          children: [
+            "/library/Vue/01、深入理解对象.md",
+          ],
+        },
+      ],
     },
   ],
   "/client/": [
