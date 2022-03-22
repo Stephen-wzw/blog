@@ -8,6 +8,7 @@ module.exports = {
 
   // 移动端优化
   head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     [
       "meta",
       {
