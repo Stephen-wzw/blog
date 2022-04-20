@@ -2,7 +2,7 @@ var NavBar = require("./configs/navbar");
 var SideBar = require("./configs/sidebar");
 
 module.exports = {
-  title: "I'm on the cloud",
+  title: "On the cloud",
   description: "Just playing around",
   base: "/blog/",
 

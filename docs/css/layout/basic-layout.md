@@ -1,4 +1,11 @@
-# 基本布局
+---
+title: 基本布局
+date: 2021-09-12
+categories:
+  - CSS
+tags:
+  - 布局
+---
 
 ## 1. 盒模型宽度的计算
 
@@ -158,7 +165,7 @@
 | 左栏处理     | `positon` + `margin-left` | `margin-left`      |
 | 右栏处理     | `margin-right`            | `margin-left`      |
 
-### 5.2 手写clearfix
+### 5.2 手写 clearfix
 
 ```css
 /* 1、父级标签定义伪类 */

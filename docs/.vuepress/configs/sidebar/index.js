@@ -8,9 +8,12 @@ module.exports = {
   ],
   "/css/": [
     {
-      title: "CSS",
+      title: "布局",
       collapsable: false,
-      children: ["layout/basic-layout.md"],
+      children: [
+        "layout/basic-layout.md",
+        "layout/postcss-px-to-viewport.md"
+      ],
     },
   ],
   "/javascript/": [
@@ -18,40 +21,43 @@ module.exports = {
       title: "JavaScript",
       collapsable: false,
       children: [
-        "/javascript/",
-        {
-          title: "对象",
-          children: [
-            "/javascript/object/01、深入理解对象.md",
-          ],
-        },
+        "/javascript/0001、深入理解对象.md",
+        "/javascript/0002、创建对象.md",
+        "/javascript/0003、继承.md",
+        "/javascript/0004、类.md",
+        "/javascript/0005、字符串操作中slice、substring的区别.md"
       ],
     },
   ],
-  "/library/": [
+  "/library/Vue/": [
     {
       title: "Vue",
       collapsable: false,
       children: [
-        "/library/",
-        {
-          title: "对象",
-          children: [
-            "/library/Vue/01、响应式原理.md",
-          ],
-        },
+        "01、响应式原理.md",
+        "02、Vuex 原理.md"
+      ],
+    },
+  ],
+  "/library/React/": [
+    {
+      title: "React",
+      collapsable: false,
+      children: [
+        
       ],
     },
   ],
   "/client/": [
     {
-      title: "客户端",
+      title: "浏览器",
       collapsable: false,
       children: [
         "0001、输入URL浏览器干了什么.md",
         "0002、浏览器是怎么渲染的.md",
-        "0003、V8引擎",
-        "0004、内存管理"
+        "0003、V8引擎.md",
+        "0004、内存管理.md",
+        "0005、HTTP概述.md"
       ]
     }
   ],
@@ -60,7 +66,6 @@ module.exports = {
       title: "Server",
       collapsable: false,
       children: [
-        "/server/",
         {
           title: "部署 vuepress",
           children: [
