@@ -25,7 +25,8 @@ module.exports = {
         "/javascript/0002、创建对象.md",
         "/javascript/0003、继承.md",
         "/javascript/0004、类.md",
-        "/javascript/0005、字符串操作中slice、substring的区别.md"
+        "/javascript/0005、字符串操作中slice、substring的区别.md",
+        "/javascript/0006、执行上下文.md",
       ],
     },
   ],
