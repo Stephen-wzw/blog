@@ -27,6 +27,7 @@ module.exports = {
         "/javascript/0004、类.md",
         "/javascript/0005、字符串操作中slice、substring的区别.md",
         "/javascript/0006、执行上下文.md",
+        "/javascript/0007、this指向.md",
       ],
     },
   ],
