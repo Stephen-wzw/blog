@@ -50,7 +50,7 @@ Function.prototype.myapply = function(thisArg, args) {
 
   // 执行
   thisArg.fn = fn;
-  thisArg.fn(...args);
+  const res = thisArg.fn(...args);
   delete thisArg.fn;
 
   return res;
