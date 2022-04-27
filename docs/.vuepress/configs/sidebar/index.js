@@ -28,6 +28,7 @@ module.exports = {
         "/javascript/0005、字符串操作中slice、substring的区别.md",
         "/javascript/0006、执行上下文.md",
         "/javascript/0007、this指向.md",
+        "/javascript/0008、手写call-apply-bind.md",
       ],
     },
   ],
@@ -60,7 +61,8 @@ module.exports = {
         "0003、V8引擎.md",
         "0004、内存管理.md",
         "0005、HTTP概述.md",
-        "0006、GET和POST区别.md"
+        "0006、GET和POST区别.md",
+        "0007、HTTP性能演变.md",
       ]
     }
   ],
