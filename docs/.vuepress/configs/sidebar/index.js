@@ -3,16 +3,19 @@ module.exports = {
     {
       title: "HTML",
       collapsable: false,
-      children: ["HTML.md"],
+      children: [
+        "0001、DOCTYPE.md"
+      ],
     },
   ],
   "/css/": [
     {
-      title: "布局",
+      title: "CSS",
       collapsable: false,
       children: [
-        "layout/basic-layout.md",
-        "layout/postcss-px-to-viewport.md"
+        "0001、盒子模型.md",
+        "0002、flex.md",
+        "0003、postcss-px-to-viewport.md"
       ],
     },
   ],
