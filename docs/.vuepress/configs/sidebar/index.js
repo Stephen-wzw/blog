@@ -4,7 +4,8 @@ module.exports = {
       title: "HTML",
       collapsable: false,
       children: [
-        "0001、DOCTYPE.md"
+        "0001、DOCTYPE.md",
+        "0002、src和href的区别",
       ],
     },
   ],
@@ -24,14 +25,14 @@ module.exports = {
       title: "JavaScript",
       collapsable: false,
       children: [
-        "/javascript/0001、深入理解对象.md",
-        "/javascript/0002、创建对象.md",
-        "/javascript/0003、继承.md",
-        "/javascript/0004、类.md",
-        "/javascript/0005、字符串操作中slice、substring的区别.md",
-        "/javascript/0006、执行上下文.md",
-        "/javascript/0007、this指向.md",
-        "/javascript/0008、手写call-apply-bind.md",
+        "0001、深入理解对象.md",
+        "0002、创建对象.md",
+        "0003、继承.md",
+        "0004、类.md",
+        "0005、字符串操作中slice、substring的区别.md",
+        "0006、执行上下文.md",
+        "0007、this指向.md",
+        "0008、手写call-apply-bind.md",
       ],
     },
   ],
@@ -50,7 +51,6 @@ module.exports = {
       title: "React",
       collapsable: false,
       children: [
-        
       ],
     },
   ],
@@ -69,20 +69,16 @@ module.exports = {
       ]
     }
   ],
-  "/server/": [
+  "/engineering/": [
     {
       title: "Server",
       collapsable: false,
       children: [
-        {
-          title: "部署 vuepress",
-          children: [
-            "/server/practice/0001、设置 ssh 密钥登录.md",
-            "/server/practice/0002、搭建 git 私服.md",
-            "/server/practice/0003、配置宝塔面板.md",
-            "/server/practice/0004、自动部署.md",
-          ],
-        },
+        "",
+        "0001、设置 ssh 密钥登录.md",
+        "0002、搭建 git 私服.md",
+        "0003、配置宝塔面板.md",
+        "0004、自动部署.md",
       ],
     },
   ],

@@ -11,7 +11,7 @@ module.exports = [
     ],
   },
   { text: "浏览器", link: "/client/" },
-  { text: "服务器", link: "/server/" },
+  { text: "工程化", link: "/engineering/" },
   { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
   { text: "GitHub", link: "https://github.com/Stephen-wzw/blog", icon: 'reco-github' },
 ];
