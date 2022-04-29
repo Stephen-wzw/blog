@@ -74,7 +74,6 @@ module.exports = {
       title: "Server",
       collapsable: false,
       children: [
-        "",
         "0001、设置 ssh 密钥登录.md",
         "0002、搭建 git 私服.md",
         "0003、配置宝塔面板.md",
