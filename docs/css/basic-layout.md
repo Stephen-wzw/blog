@@ -7,19 +7,6 @@ tags:
   - 布局
 ---
 
-## 1. 盒模型宽度的计算
-
-- 普通盒模型
-  - 默认盒子属性：`box-sizing: content-box;`
-  - `offsetWidth = (width + padding + border)`，不算 `margin`
-  - `width` 和 `height` 属性只会应用到这个元素的内容区
-    <img src="./img/layout/normal-box.png" alt="普通盒模型" style="zoom:50%;" />
-- 怪异盒模型
-  - 设置语句：`box-sizing: border-box;`
-  - `offsetWidth = width`（`padding` 和 `border` 都挤压到内容里面）
-  - `width` 和 `height` 包括内容区、`padding` 和 `border`，不算 `margin`
-    <img src="./img/layout/abnormal-box.png" alt="怪异盒模型" style="zoom:50%;" />
-
 ## 2. margin 纵向重叠
 
 - `margin` 纵向重叠取重叠区最大值，不进行叠加

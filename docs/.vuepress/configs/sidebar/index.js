@@ -6,6 +6,8 @@ module.exports = {
       children: [
         "0001、DOCTYPE.md",
         "0002、src和href的区别",
+        "0003、HTML5新特性",
+        "0004、语义化标签"
       ],
     },
   ],
@@ -16,7 +18,8 @@ module.exports = {
       children: [
         "0001、盒子模型.md",
         "0002、flex.md",
-        "0003、postcss-px-to-viewport.md"
+        "0003、postcss-px-to-viewport.md",
+        "0004、定位.md",
       ],
     },
   ],
