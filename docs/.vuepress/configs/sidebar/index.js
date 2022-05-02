@@ -36,6 +36,8 @@ module.exports = {
         "0006、执行上下文.md",
         "0007、this指向.md",
         "0008、手写call-apply-bind.md",
+        "0009、var-let-const.md",
+        "0010、判断数据类型.md",
       ],
     },
   ],
