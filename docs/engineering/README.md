@@ -7,3 +7,4 @@ publish: false
 * [搭建 git 私服](0002、搭建%20git%20私服.md)
 * [配置宝塔面板](0003、配置宝塔面板.md)
 * [Vuepress 自动部署](0004、自动部署.md)
+* [webpack 基础打包](0005、webpack基础打包.md)

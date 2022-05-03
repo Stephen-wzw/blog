@@ -5,6 +5,7 @@ categories:
   - JavaScript
 tags:
   - this
+  - 手写代码
 ---
 
 `call()`、`apply()` 和 `bind()` 三者都可以改变 JavaScript 中的 this 指向，关于三者的区别在 [this 指向](./0007%E3%80%81this%E6%8C%87%E5%90%91.md)中有详细记录。

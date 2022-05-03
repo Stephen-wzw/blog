@@ -38,6 +38,7 @@ module.exports = {
         "0008、手写call-apply-bind.md",
         "0009、var-let-const.md",
         "0010、判断数据类型.md",
+        "0011、判断对象值相等.md"
       ],
     },
   ],
@@ -64,6 +65,7 @@ module.exports = {
       title: "浏览器",
       collapsable: false,
       children: [
+        "0008、浏览器概述.md",
         "0001、输入URL浏览器干了什么.md",
         "0002、浏览器是怎么渲染的.md",
         "0003、V8引擎.md",
