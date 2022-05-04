@@ -73,6 +73,7 @@ module.exports = {
         "0005、HTTP概述.md",
         "0006、GET和POST区别.md",
         "0007、HTTP性能演变.md",
+        "0009、HTTP缓存.md"
       ]
     }
   ],
