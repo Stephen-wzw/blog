@@ -66,14 +66,15 @@ module.exports = {
       collapsable: false,
       children: [
         "0008、浏览器概述.md",
-        "0001、输入URL浏览器干了什么.md",
+        // "0001、输入URL浏览器干了什么.md",
         "0002、浏览器是怎么渲染的.md",
         "0003、V8引擎.md",
         "0004、内存管理.md",
         "0005、HTTP概述.md",
         "0006、GET和POST区别.md",
         "0007、HTTP性能演变.md",
-        "0009、HTTP缓存.md"
+        "0009、HTTP缓存.md",
+        "0010、HTTPS略解.md"
       ]
     }
   ],
