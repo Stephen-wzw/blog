@@ -87,7 +87,8 @@ module.exports = {
         "0002、搭建 git 私服.md",
         "0003、配置宝塔面板.md",
         "0004、自动部署.md",
-        "0005、webpack基础打包.md"
+        "0005、webpack基础打包.md",
+        "0006、webpack打包CSS.md",
       ],
     },
   ],
