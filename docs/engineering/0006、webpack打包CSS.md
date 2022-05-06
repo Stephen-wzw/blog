@@ -1,6 +1,6 @@
 ---
 title: webpack 打包 CSS
-date: 2022-04-29
+date: 2022-05-06
 categories:
   - 工程化
 tags:
@@ -8,7 +8,7 @@ tags:
   - webpack
 ---
 
-继续使用[之前的项目](./0005、webpack基础打包)，不过在以下文件做点修改：
+继续使用[之前的项目](./0005、webpack基础打包.md)，不过在以下文件做点修改：
 
 **index.html**
 
@@ -232,7 +232,7 @@ npm install style-loader -D
  div.innerHTML = "webpack-css";
  
  document.body.appendChild(div);
-``
+```
 
 现在我们需要安装 `less-loader` 来处理 .less 文件：
 
