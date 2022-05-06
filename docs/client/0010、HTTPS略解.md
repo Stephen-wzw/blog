@@ -99,10 +99,10 @@ HTTPS 使用混合加密算法解决数据安全传输问题，即**对称加密
 
 ## 参考链接
 
-[[信息安全\] 1.密码工具箱 ](https://www.cnblogs.com/linianhui/p/security-based-toolbox.html)
+[\[信息安全\] 1.密码工具箱 ](https://www.cnblogs.com/linianhui/p/security-based-toolbox.html)
 
-[[信息安全\] 2.密码工具箱（续）](https://www.cnblogs.com/linianhui/p/security-complex-toolbox.html)
+[\[信息安全\] 2.密码工具箱（续）](https://www.cnblogs.com/linianhui/p/security-complex-toolbox.html)
 
-[[信息安全\] 3.HTTPS工作流程](https://www.cnblogs.com/linianhui/p/security-https-workflow.html)
+[\[信息安全\] 3.HTTPS工作流程](https://www.cnblogs.com/linianhui/p/security-https-workflow.html)
 
 [HTTPS 详解一：附带最精美详尽的 HTTPS 原理图](https://segmentfault.com/a/1190000021494676)

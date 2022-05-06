@@ -5,6 +5,7 @@ categories:
   - 工程化
 tags:
   - 项目打包
+  - webpack
 ---
 
 ## 基本安装
@@ -233,3 +234,11 @@ npm run build
 ```
 
 浏览器打开 index.html 后，仍能正常显示正确结果。
+
+## 总结
+
+从这个案例中，我们首先安装了 webpack，并使用它对 JS 两种模块风格的代码进行了打包。
+
+而打包又可以使用 `webpack` 命令使用全局安装的 webpack 进行打包，也可以使用 `npx webpack` 使用局部安装的 webpack 进行打包。
+
+最后又引入了配置文件，并使用 npm scripts 来执行 webpack 命令。
