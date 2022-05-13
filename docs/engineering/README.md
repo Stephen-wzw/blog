@@ -8,3 +8,5 @@ publish: false
 * [配置宝塔面板](0003、配置宝塔面板.md)
 * [Vuepress 自动部署](0004、自动部署.md)
 * [webpack 基础打包](0005、webpack基础打包.md)
+* [webpack 打包 CSS](0006、webpack打包CSS.md)
+* [webpack 打包其他资源](0007、webpack打包资源.md)
