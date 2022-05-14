@@ -90,6 +90,7 @@ module.exports = {
         "0005、webpack基础打包.md",
         "0006、webpack打包CSS.md",
         "0007、webpack打包资源.md",
+        "0008、webpack插件.md",
       ],
     },
   ],
