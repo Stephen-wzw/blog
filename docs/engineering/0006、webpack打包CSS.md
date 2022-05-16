@@ -387,10 +387,6 @@ npm install postcss-preset-env -D
 
 然后修改下 `postcss.config.js` 文件。
 
-### `postcss-px-to-viewport`
-
-这个插件可以帮助我们将 px 单位转换为视口单位，这在进行移动端适配时尤为重要。详细使用见 [postcss-px-to-view](../css/0003、postcss-px-to-viewport.md)。
-
 **postcss.config.js**
 
 ```diff
@@ -404,6 +400,10 @@ npm install postcss-preset-env -D
 ```
 
 重新打包后打开浏览器样式依然生效。
+
+### `postcss-px-to-viewport`
+
+这个插件可以帮助我们将 px 单位转换为视口单位，这在进行移动端适配时尤为重要。详细使用见 [postcss-px-to-view](../css/0003、postcss-px-to-viewport.md)。
 
 ## 总结
 
