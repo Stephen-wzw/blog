@@ -10,3 +10,5 @@ publish: false
 * [webpack 基础打包](0005、webpack基础打包.md)
 * [webpack 打包 CSS](0006、webpack打包CSS.md)
 * [webpack 打包其他资源](0007、webpack打包资源.md)
+* [webpack 插件](0008、webpack插件.md)
+* [webpack-babel](0009、webpack-babel.md)
