@@ -268,8 +268,145 @@ npm install less-loader -D
 
 现在重新执行 `npm run build`，可以发现 less 样式已经生效了。
 
+## `post-css-loader`
+
+开发中除了使用预处理器外，还可能需要使用 CSS 后处理器 `postcss`。他能帮我们进行 CSS 的转换和适配，比如自动添加浏览器前缀、CSS 样式的重置。
+
+首先安装 `postcss` 和 `postcss-loader`：
+
+```bash
+npm install postcss postcss-loader -D
+```
+
+还需要安装自动添加前缀的插件 `autoprefixer`：
+
+```bash
+npm install autoprefixer -D
+```
+
+此时配置 `webpack.config.js`：
+
+**webpack.config.js**
+
+```diff
+  const path = require("path");
+  
+  module.exports = {
+    entry: "./src/index.js",
+    output: {
+      filename: "bundle.js",
+      path: path.resolve(__dirname, "dist"),  // 需要使用绝对路径
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(less|css)$/,
+          use: [
+            'style-loader', 
+            'css-loader', 
++           {
++             loader: 'postcss-loader',
++             options: {
++               postcssOptions: {
++                 plugins: [
++                   require("autoprefixer")
++                 ]
++               }
++             }
++           },
+           'less-loader'],
+        },
+      ],
+    },
+  };
+```
+
+执行 `npm run build` 打包，在浏览器中查看样式，即可看到 `postcss` 为我们自动添加了前缀：
+
+```css
+.title {
+  color: #000;
+  font-weight: 700;
+  font-size: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+```
+
+### `postcss.config.js`
+
+以上的这些配置信息太长了，我们可以将它们单独在一个文件中进行配置，在项目根目录下新建 `postcss.config.js`。
+
+**postcss.config.js**
+
+```js
+module.exports = {
+  plugins: [
+    require("autoprefixer")
+  ]
+};
+```
+
+**webpack.config.js**
+
+```diff
+const path = require("path");
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"), // 需要使用绝对路径
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(less|css)$/,
++       use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
+      },
+    ],
+  },
+};
+```
+
+重新打包后打开浏览器样式依然生效。
+
+### `postcss-preset-env`
+
+事实上，在配置 `postcss-loader` 的时候，配置插件并不需要使用 `autoprefixer`。可以使用另一个插件 `postscc-preset-env`，它可以帮助我们将一些现代的 CSS 特性，转成大多数浏览器认识的 CSS，并且会根据目标浏览器或者运行时环境添加所需的 ployfill。
+
+> ployfill 用来为旧浏览器提供它没有原生支持的较新的功能。比如说 polyfill 可以让 IE7 使用 Silverlight 插件来模拟 HTML Canvas 元素的功能，或模拟 CSS 实现 rem 单位的支持，或 text-shadow，或其他任何你想要的功能。
+
+这个插件也会自动帮我们添加 autoprefixer。
+
+```bash
+npm install postcss-preset-env -D
+```
+
+然后修改下 `postcss.config.js` 文件。
+
+### `postcss-px-to-viewport`
+
+这个插件可以帮助我们将 px 单位转换为视口单位，这在进行移动端适配时尤为重要。详细使用见 [postcss-px-to-view](../css/0003、postcss-px-to-viewport.md)。
+
+**postcss.config.js**
+
+```diff
+ module.exports = {
+   plugins: [
+-    require("autoprefixer")
++    // 在使用某些插件时，也可以直接传入字符串
++    "postcss-preset-env"
+   ]
+ };
+```
+
+重新打包后打开浏览器样式依然生效。
+
 ## 总结
 
-在这个案例里，我们分别使用了 `style-loader` 加载 css 样式， `css-loader` 处理 .css 文件， `less-loader` 处理 .less 文件。
+在这个案例里，我们分别使用了 `style-loader` 加载 css 样式， `css-loader` 处理 .css 文件， `less-loader` 处理 .less 文件，以及使用 `postcss` 给样式自动添加前缀。
 
-loader 的执行顺序是从后往前的，因此需要配置规则中写成 `use: ['style-loader', 'css-loader', 'less-loader']`。
+loader 的执行顺序是从后往前的，因此需要配置规则中写成 `use: ["style-loader", "css-loader", "postcss-loader", "less-loader"]`。

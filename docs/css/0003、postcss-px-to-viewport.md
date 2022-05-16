@@ -24,22 +24,26 @@ npm install postcss-px-to-viewport --save-dev
 新建 `postcss.config.js`，默认配置如下：
 
 ```js
-{
-  unitToConvert: 'px',        // 需要转换的单位
-  viewportWidth: 320,         // 设计稿的视口宽度
-  unitPrecision: 5,           // 单位转换后保留的精度
-  propList: ['*'],            // 能转换的vw属性列表
-  viewportUnit: 'vw',         // 希望使用的视口单位
-  fontViewportUnit: 'vw',     // 字体使用的视口单位
-  selectorBlackList: [],      // 需要忽略的css选择器
-  minPixelValue: 1,           // 设置最小的转换数值，如果为1，只有大于1的值才会被转换
-  mediaQuery: false,          // 媒体查询中是否需要转换单位
-  replace: true,              // 是否直接更换属性值
-  exclude: undefined,         // 忽略一些文件比如 node_modules
-  include: undefined,         // 如果设置了 include，则仅转换匹配的文件
-  landscape: false,           // 是否添加根据 landscapeWidth 生成的媒体查询条件 @media (orientation: landscape)
-  landscapeUnit: 'vw',        // 横屏时使用的单位
-  landscapeWidth: 568         // 横屏时使用的视口宽度
+module.exports = {
+  plugins: {
+    "postcss-px-to-viewport": {
+      unitToConvert: 'px',        // 需要转换的单位
+      viewportWidth: 320,         // 设计稿的视口宽度
+      unitPrecision: 5,           // 单位转换后保留的精度
+      propList: ['*'],            // 能转换的vw属性列表
+      viewportUnit: 'vw',         // 希望使用的视口单位
+      fontViewportUnit: 'vw',     // 字体使用的视口单位
+      selectorBlackList: [],      // 需要忽略的css选择器
+      minPixelValue: 1,           // 设置最小的转换数值，如果为1，只有大于1的值才会被转换
+      mediaQuery: false,          // 媒体查询中是否需要转换单位
+      replace: true,              // 是否直接更换属性值
+      exclude: undefined,         // 忽略一些文件比如 node_modules
+      include: undefined,         // 如果设置了 include，则仅转换匹配的文件
+      landscape: false,           // 是否添加根据 landscapeWidth 生成的媒体查询条件 @media (orientation: landscape)
+      landscapeUnit: 'vw',        // 横屏时使用的单位
+      landscapeWidth: 568         // 横屏时使用的视口宽度
+    }
+  }
 }
 ```
 
