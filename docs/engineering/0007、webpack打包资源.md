@@ -93,7 +93,7 @@ tags:
 + }
 ```
 
-下面需要配置 `webpack.config.js`，在 webpack5 以前，图片等资源一般使用 `file-loader` 或 `url-loader` 进行打包，但是 webpack5 后，这两个 loader 在官方文档中已经被删掉了，因此使用它们会出现一系列的问题。现在更推荐使用**资源模块类型（asset module type）**进行打包。
+下面需要配置 `webpack.config.js`，在 webpack5 以前，图片等资源一般使用 `file-loader` 或 `url-loader` 进行打包，但是 webpack5 后，这两个 loader 在官方文档中已经被删掉了，因此使用它们会出现一系列的问题。现在更推荐使用**资源模块类型(asset module type)**进行打包。
 
 但是虽然官方已经不推荐使用了，了解下他们的各自用途还是必要的:
 
@@ -108,7 +108,7 @@ tags:
 * `asset/source` 导出资源的源代码。之前通过使用 `raw-loader` 实现；
 * `asset` 在导出一个 data URI 和发送一个单独的文件之间自动选择。之前通过使用 `url-loader`，并且配置资源体积限制实现。
 
-那么现在可以对 `webpack.config.js` 进行如下配置：
+那么现在可以对 `webpack.config.js` 配置 `asset` 对图片进行打包：
 
 ```diff
  const path = require("path");
@@ -118,7 +118,7 @@ tags:
    output: {
      filename: "bundle.js",
      path: path.resolve(__dirname, "dist"), // 需要使用绝对路径
-+    publicPath: "./dist/",  // css url 导入时，不加则会报错
++    publicPath: "./dist/",  // 保证 css url 导入时路径正确
    },
    module: {
      rules: [
@@ -128,7 +128,7 @@ tags:
        },
 +      {
 +        test: /\.(jpe?g|png|gif|svg)$/,
-+        type: "asset/resource",
++        type: "asset",
 +        generator: {
 +          filename: "img/[name]_[hash:8][ext]"
 +        },
@@ -217,7 +217,7 @@ tags:
 +document.body.appendChild(iEl);
 ```
 
-修改 `webpack.config.js` 配置：
+修改 `webpack.config.js` 配置 `asset/resource` 对字体进行打包：
 
 ```diff
  const path = require("path");

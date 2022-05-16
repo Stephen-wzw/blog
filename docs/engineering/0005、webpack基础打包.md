@@ -99,7 +99,7 @@ export function sum(num1, num2) {
 
 ```js
 import { sum } from "./js/math.js";
-import { priceFormat } from "./js/format";
+const { priceFormat } = require("./js/format");
 
 console.log(sum(10, 20));
 console.log(priceFormat());

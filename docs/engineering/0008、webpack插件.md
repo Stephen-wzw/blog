@@ -274,7 +274,7 @@ webpack 提供 `mode` 配置选项，告知 webpack 使用相应模式的内置�
 * `production`：会将 `DefinePlugin` 中 `process.env.NODE_ENV` 的值设置为 `production`。为模块和 chunk 启用确定性的混淆名称，`FlagDependencyUsagePlugin`，`FlagIncludedChunksPlugin`，`ModuleConcatenationPlugin`，`NoEmitOnErrorsPlugin` 和 `TerserPlugin`。
 * `none`：不使用任何默认优化。
 
-![mode配置](img/0008/mode.png)
+![mode配置](./img/0008/mode.png)
 
 在开发阶段，通常会设置 `mode: development`。
 
@@ -298,7 +298,9 @@ webpack 提供 `mode` 配置选项，告知 webpack 使用相应模式的内置�
 
 控制台上会报错，但是不会显示具体在原文件的哪个位置。
 
-![](img/0008/source-map-1.png)
+![](./img/0008/source-map-1.png)
+
+如果需要显示错误的具体位置，那么需要在 `webpack.config.js` 中配置开发模式：
 
 ```diff
  // 省略其他 
@@ -312,7 +314,7 @@ webpack 提供 `mode` 配置选项，告知 webpack 使用相应模式的内置�
 
 此时重新打包后，在控制台就会出现错误的具体位置，能够快速帮我们解决 bug。
 
-![](img/0008/source-map-2.png)
+![](./img/0008/source-map-2.png)
 
 ## 总结
 
