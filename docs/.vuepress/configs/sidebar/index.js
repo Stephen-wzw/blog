@@ -94,7 +94,7 @@ module.exports = {
         "0009、webpack-babel.md",
         "0010、webpack-vue.md",
         "0011、webpack-server.md",
-        "0012、webpack-reslove.md",
+        "0012、webpack-resolve.md",
         "0013、webpack环境分离.md",
       ],
     },
