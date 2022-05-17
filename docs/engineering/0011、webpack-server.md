@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 目前我们开发的项目，为了运行需要有两个操作：
 
 * 操作一：`npm run build`，编译相关的代码；

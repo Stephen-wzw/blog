@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 继续使用[之前的项目](./0005、webpack基础打包.md)，不过在以下文件做点修改：
 
 **index.html**

@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 在开发中会有各种各样的模块，这些文件可能自己编写，也可能来自第三方库。`resolve` 选项能设置模块如何被解析。webpack 会提供合理的默认值，但是还是可能会修改一些解析的细节。
 
 ## webpack 解析规则

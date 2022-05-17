@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 平时我们可以通过 Vue-cli 快速搭建 Vue 开发环境，但是要知道 Vue-cli 也是基于 webpack 构建的，那么如何使用 webpack 搭建 Vue 开发环境呢？
 
 前面已经了解了 webpack 如何对 js、css、图片、字体等其他资源进行打包处理，而想要搭建 Vue 开发环境，主要就是对 `.vue` 文件进行处理。

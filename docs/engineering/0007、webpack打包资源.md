@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 继续使用[之前的项目](./0006、webpack打包CSS.md)。
 
 ## 打包图片资源

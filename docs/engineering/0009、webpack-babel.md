@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 babel 是一个工具链，主要用于旧浏览器或环境中将 ECMAScript 2015+ 的代码转换成向后兼容版本的 JavaScript。
 
 ```js

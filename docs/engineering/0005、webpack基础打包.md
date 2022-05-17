@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 ## 基本安装
 
 webpack 需要安装两个工具：webpack 和 webpack-cli（命令行接口）。

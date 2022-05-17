@@ -8,6 +8,8 @@ tags:
   - webpack
 ---
 
+> 项目地址：https://github.com/Stephen-wzw/webpack-demo
+
 development(开发环境) 和 production(生产环境) 这两个环境下的构建目标存在着巨大差异。由于要遵循逻辑分离，需要为每个环境编写彼此独立的 webpack 配置。
 
 ## 配置
