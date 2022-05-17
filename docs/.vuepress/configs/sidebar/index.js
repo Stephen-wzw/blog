@@ -93,6 +93,7 @@ module.exports = {
         "0008、webpack插件.md",
         "0009、webpack-babel.md",
         "0010、webpack-vue.md",
+        "0011、webpack-server.md",
       ],
     },
   ],
