@@ -16,3 +16,4 @@ publish: false
 * [webpack-server](0010、webpack-server.md)
 * [webpack-resolve](0012、webpack-resolve.md)
 * [webpack 环境分离](0013、webpack环境分离.md)
+* [vite 初体验](0014、vite初体验.md)

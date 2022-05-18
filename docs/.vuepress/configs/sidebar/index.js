@@ -96,6 +96,7 @@ module.exports = {
         "0011、webpack-server.md",
         "0012、webpack-resolve.md",
         "0013、webpack环境分离.md",
+        "0014、vite初体验.md",
       ],
     },
   ],
