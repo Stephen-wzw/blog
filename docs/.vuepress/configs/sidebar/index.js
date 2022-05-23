@@ -47,7 +47,7 @@ module.exports = {
       title: "Vue",
       collapsable: false,
       children: [
-        "01、响应式原理.md",
+        "01、父子组件通信.md",
         "02、Vuex 原理.md"
       ],
     },
