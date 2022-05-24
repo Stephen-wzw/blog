@@ -162,4 +162,23 @@ provide() {
 }
 ```
 
-在这种情况下，任何对 `content.length` 的改变都会被正确地反映在注入 `length` 的组件中。
+因为 `computed` 返回的是一个 ref 对象，因此在子组件中需要用 `length.value` 进行调用：
+
+```diff
+  <!-- HomeContent -->
+  <template>
+    <div>
+      <!-- HomeContent: wang - 18 -->
+-     HomeContent: {{name}} - {{age}} - {{ length }}
++     HomeContent: {{name}} - {{age}} - {{ length.value }}
+    </div>
+  </template>
+
+  <script>
+  export default {
+    inject: ["name", "age", "length"],
+  }
+  </script>
+```
+
+经过上述处理，任何对 `content.length` 的改变都会被正确地反映在注入 `length` 的组件中。
