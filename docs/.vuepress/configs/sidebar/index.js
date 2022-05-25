@@ -48,7 +48,8 @@ module.exports = {
       collapsable: false,
       children: [
         "01、父子组件通信.md",
-        "02、provide-inject.md"
+        "02、provide-inject.md",
+        "03、插槽.md",
       ],
     },
   ],
