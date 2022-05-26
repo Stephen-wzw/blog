@@ -6,3 +6,4 @@ publish: false
 * [父子组件通信](01、父子组件通信.md)
 * [Provide/Inject](02、provide-inject.md)
 * [插槽](03、插槽.md)
+* [动态组件和异步组件](04、动态组件和异步组件.md)
