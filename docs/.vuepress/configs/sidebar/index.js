@@ -51,6 +51,7 @@ module.exports = {
         "02、provide-inject.md",
         "03、插槽.md",
         "04、动态组件和异步组件.md",
+        "05、组件的v-model.md",
       ],
     },
   ],
