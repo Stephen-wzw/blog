@@ -8,3 +8,4 @@ publish: false
 * [插槽](03、插槽.md)
 * [动态组件和异步组件](04、动态组件和异步组件.md)
 * [组件的 v-model](05、组件的v-model.md)
+* [mixin](06、Mixin.md)
