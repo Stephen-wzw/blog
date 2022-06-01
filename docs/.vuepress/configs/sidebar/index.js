@@ -53,6 +53,7 @@ module.exports = {
         "04、动态组件和异步组件.md",
         "05、组件的v-model.md",
         "06、Mixin.md",
+        "07、组合式API基础",
       ],
     },
   ],
