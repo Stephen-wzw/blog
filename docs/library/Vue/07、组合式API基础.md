@@ -126,11 +126,31 @@ export default {
 * 可选的配置选项。
 
 ```js
-import { ref, watch } from 'vue';
+import { ref, reactive, watch } from 'vue';
 
+// 一、可响应式的对象：reactive/ref
+// ref 对象：获取到的 newValue 和 oldValue 为 ref.value 本身
 const counter = ref(0);
 watch(counter, (newValue, oldValue) => {
-  console.log('新值是: ' + counter.value)
+  console.log('新值是: ' + newValue, '旧值是：' + oldValue);
+})
+
+// reactive 对象，获取到的 newValue 和 oldValue 一致，都为 proxy 对象
+const info = reactive({age: 18});
+watch(counter, (newValue, oldValue) => {
+  console.log('新值是: ' + newValue, '旧值是：' + oldValue);
+})
+// 如果希望为二者是一个普通的对象
+watch(() => ({...info}), (newValue, oldValue) => {
+  console.log('新值是: ' + newValue, '旧值是：' + oldValue);
+})
+
+// 二、getter 函数
+const state = reactive({
+  counter: 0
+})
+watch(() => state.counter, (newValue, oldValue) => {
+  console.log('新值是: ' + newValue, '旧值是：' + oldValue);
 })
 ```
 
@@ -139,12 +159,176 @@ watch(counter, (newValue, oldValue) => {
 与 `ref` 和 `watch` 类似，也可以使用从 Vue 导入的 `computed` 函数在 Vue 组件外部创建计算属性：
 
 ```js
-import { ref, computed } from 'vue'
+import { ref, computed } from 'vue';
 
-const counter = ref(0)
-const twiceTheCounter = computed(() => counter.value * 2)
+const counter = ref(0);
+const twiceTheCounter = computed(() => counter.value * 2);
 
-counter.value++
-console.log(counter.value) // 1
-console.log(twiceTheCounter.value) // 2
+counter.value++;
+console.log(counter.value); // 1
+console.log(twiceTheCounter.value); // 2
+```
+
+## `provide/inject`
+
+### 使用 `provide`
+
+在 `setup` 中使用 `provide` 时，必须首先导入 `provide` 函数。`provide` 接收两个参数用于定义 property：name（`<String>` 类型）和 value。
+
+```js
+import { provide } from 'vue';
+
+export default {
+  setup() {
+    provide('location', 'North Pole')
+    provide('geolocation', {
+      longitude: 90,
+      latitude: 135
+    })
+  }
+}
+```
+
+### 使用 `inject`
+
+同样，在 `setup` 中使用 `inject` 时，必须首先导入 `inject` 函数。`inject` 接收两个参数：name（`<String>` 类型）和默认值（可选）。
+
+```js
+import { inject } from 'vue';
+
+export default {
+  setup() {
+    const userLocation = inject('location', '默认值');
+    const userGeolocation = inject('geolocation');
+
+    return {
+      userLocation,
+      userGeolocation
+    }
+  }
+}
+```
+
+### 响应式
+
+这时候父组件和子组件的值并不是响应式的，为了增加 provide 值和 inject 值的响应式，在 provide 值时需要使用 ref 或 reactive。
+
+```js
+import { provide, reactive, ref } from 'vue';
+
+export default {
+  setup() {
+    const location = ref('North Pole');
+    const geolocation = reactive({
+      longitude: 90,
+      latitude: 135
+    });
+
+    provide('location', location);
+    provide('geolocation', geolocation);
+  }
+}
+```
+
+如果父组件中这两个 provide 值有任何修改，则子组件中的 inject 值也会自动更新。
+
+### 修改响应式 property
+
+当使用响应式 provide / inject 值时，应该尽可能将对响应式 property 的所有修改限制在定义 provide 的组件内部。
+
+```js
+import { provide, reactive, ref } from 'vue';
+
+export default {
+  setup() {
+    const location = ref('North Pole');
+    const geolocation = reactive({
+      longitude: 90,
+      latitude: 135
+    });
+
+    // 修改 provide 值
+    const updateLocation = () => {
+      location.value = 'South Pole';
+    };
+
+    provide('location', location);
+    provide('geolocation', geolocation);
+    // provide 出一个修改的方法
+    provide('updateLocation', updateLocation);
+  }
+}
+```
+
+```js
+import { inject } from 'vue';
+
+export default {
+  setup() {
+    const userLocation = inject('location', '默认值');
+    const userGeolocation = inject('geolocation');
+    const updateUserLocation = inject('updateLocation');
+
+    return {
+      userLocation,
+      userGeolocation,
+      updateUserLocation
+    }
+  }
+}
+```
+
+如果需要确保 provide 的值不会被 inject 的组件更改，可以对 provide 值使用 `readonly`。
+
+```js
+import { provide, reactive, readonly, ref } from 'vue';
+
+export default {
+  setup() {
+    const location = ref('North Pole');
+    const geolocation = reactive({
+      longitude: 90,
+      latitude: 135
+    });
+
+    // 修改 provide 值
+    const updateLocation = () => {
+      location.value = 'South Pole';
+    };
+
+    provide('location', readonly(location));
+    provide('geolocation', readonly(geolocation));
+    // provide 出一个修改的方法
+    provide('updateLocation', updateLocation);
+  }
+}
+```
+
+## 模板引用
+
+为了在 `setup` 中获取对模板的引用，可以使用 ref 并返回。
+
+```vue
+<template> 
+  <div ref="root">This is a root element</div>
+</template>
+
+<script>
+  import { ref, onMounted } from 'vue'
+
+  export default {
+    setup() {
+      const root = ref(null)
+
+      onMounted(() => {
+        // DOM 元素将在初始渲染后分配给 ref
+        console.log(root.value) // <div>This is a root element</div>
+      })
+
+      return {
+        root
+      }
+    }
+  }
+</script>
 ```
