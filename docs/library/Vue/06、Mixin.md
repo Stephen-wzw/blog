@@ -63,6 +63,53 @@ const app = Vue.createApp({
 })
 ```
 
+现在 Vue@3.x 中合并是浅层次的：
+
+```js
+const Mixin = {
+  data() {
+    return {
+      user: {
+        name: 'Jack',
+        id: 1
+      }
+    }
+  }
+}
+
+const CompA = {
+  mixins: [Mixin],
+  data() {
+    return {
+      user: {
+        id: 2
+      }
+    }
+  }
+}
+```
+
+在 Vue@2.x 中，合并后的 `$data` 是：
+
+```json
+{
+  "user": {
+    "id": 2,
+    "name": "Jack"
+  }
+}
+```
+
+在 Vue@3.x 中，结果是：
+
+```json
+{
+  "user": {
+    "id": 2
+  }
+}
+```
+
 ### 钩子函数
 
 当 mixin 对象和组件实例上都存在生命周期函数时，会将二者合并为一个数组，**因此都会被调用，但是 mixin 对象中的钩子会被先调用**。
