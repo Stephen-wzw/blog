@@ -176,24 +176,6 @@ tags:
   clear: both;
 }
 ```
-## 6. 元素居中
-
-### 6.1 行内元素水平垂直居中
-
-设置父级标签。
-
-- 水平居中： text-align: center
-- 垂直居中： line-height：盒子高度
-
-### 6.2 块级元素水平垂直居中
-
-* 水平居中: 
-  * margin : 0 auto;
-* 水平垂直都居中
-  * `position：absolute; top： 50%；left： 50%；transform：translate(-50%，-50%)` 不会触发重排，因此最常用。
-  * `position：absolute; top: 0; left:  0; right: 0; bottom: 0; margin: auto;`
-  * 容器设置：`display：flex; justify-content: center; align-items: center;`
-  * 容器：`display: table-cell;  text-align: center; vertical-align: middle;`  子元素：`display: inline-block;` 
 
 ## 7. 样式单位
 

@@ -10,3 +10,4 @@ publish: false
 * [组件的 v-model](05、组件的v-model.md)
 * [mixin](06、Mixin.md)
 * [组合式 API 基础](07、组合式API基础.md)
+* [组合式函数](08、组合式函数.md)

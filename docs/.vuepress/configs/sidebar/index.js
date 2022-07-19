@@ -7,7 +7,7 @@ module.exports = {
         "0001、DOCTYPE.md",
         "0002、src和href的区别",
         "0003、HTML5新特性",
-        "0004、语义化标签"
+        "0004、语义化标签",
       ],
     },
   ],
@@ -20,6 +20,10 @@ module.exports = {
         "0002、flex.md",
         "0003、postcss-px-to-viewport.md",
         "0004、定位.md",
+        "0005、居中.md",
+        "0006、CSS3新属性.md",
+        "0007、样式单位.md",
+        "0008、BFC.md",
       ],
     },
   ],
@@ -38,8 +42,15 @@ module.exports = {
         "0008、手写call-apply-bind.md",
         "0009、var-let-const.md",
         "0010、判断数据类型.md",
-        "0011、判断对象值相等.md"
+        "0011、判断对象值相等.md",
       ],
+    },
+  ],
+  "/leetcode/": [
+    {
+      title: "LeetCode",
+      collapsable: false,
+      children: ["0001、二叉树.md", "0002、二叉搜索树.md"],
     },
   ],
   "/library/Vue/": [
@@ -53,7 +64,8 @@ module.exports = {
         "04、动态组件和异步组件.md",
         "05、组件的v-model.md",
         "06、Mixin.md",
-        "07、组合式API基础",
+        "07、组合式API基础.md",
+        "08、组合式函数.md",
       ],
     },
   ],
@@ -61,8 +73,7 @@ module.exports = {
     {
       title: "React",
       collapsable: false,
-      children: [
-      ],
+      children: [],
     },
   ],
   "/client/": [
@@ -79,9 +90,9 @@ module.exports = {
         "0006、GET和POST区别.md",
         "0007、HTTP性能演变.md",
         "0009、HTTP缓存.md",
-        "0010、HTTPS略解.md"
-      ]
-    }
+        "0010、HTTPS略解.md",
+      ],
+    },
   ],
   "/engineering/": [
     {
@@ -105,4 +116,4 @@ module.exports = {
       ],
     },
   ],
-};
+}

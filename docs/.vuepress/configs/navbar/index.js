@@ -2,6 +2,7 @@ module.exports = [
   { text: "HTML", link: "/html/" },
   { text: "CSS", link: "/css/" },
   { text: "JavaScript", link: "/javascript/" },
+  { text: "LeetCode", link: "/leetcode/" },
   {
     text: "常用框架",
     link: "/library/",
